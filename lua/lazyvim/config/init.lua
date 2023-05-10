@@ -156,7 +156,7 @@ function M.load(name)
   if M.defaults[name] or name == "options" then
     _load("lazyvim.config." .. name)
   end
-  _load("config." .. name)
+  _load("lvm.config." .. name)
   if vim.bo.filetype == "lazy" then
     -- HACK: LazyVim may have overwritten options of the Lazy ui, so reset this here
     vim.cmd([[do VimResized]])
